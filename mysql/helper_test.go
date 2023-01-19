@@ -53,8 +53,8 @@ func setup() (func(), error) {
 			"MYSQL_ROOT_PASSWORD=password",
 		},
 		Mounts: []string{
-			// dir + "/fixtures/mysql:/opt/mysql:ro",
-			// dir + "/docker/mysql/conf.d/mysql.cnf:/etc/mysql/conf.d/mysql.cnf:ro",
+			dir + "/fixtures/mysql:/opt/mysql:ro",
+			dir + "/docker/mysql/conf.d/mysql.cnf:/etc/mysql/conf.d/mysql.cnf:ro",
 		},
 		Cmd: []string{
 			"mysqld", "--character-set-server=utf8mb4", "--collation-server=utf8mb4_unicode_ci",
